@@ -123,7 +123,7 @@ do
     Console.WriteLine("");
 } while (n != 99);*/
 
-//5.
+/*5.
 string letra;
 do {
 
@@ -154,6 +154,98 @@ do {
         Console.WriteLine();
        
     }
-} while (letra != "x");
+} while (letra != "x");*/
+
+//6.
+
+var x = 10;
+var y = 20;
+
+Console.WriteLine("Será apresentado os números pares de 10 a 20, excluíndo o 16");
+Console.WriteLine();
+
+
+
+Console.WriteLine("Incrementando de 2 em 2:");
+for (int i = 10; i <= y; i += 2)
+{
+    if (i == 16)
+    {
+        
+        continue;
+
+    }
+    Console.Write(i + " ");
+}
+
+Console.WriteLine();
+Console.WriteLine();
+Console.WriteLine("Incrementando de 1 em 1:");
+
+for (int i = x; i <= y; i++)
+{
+    if (i == 16)
+    {
+        continue;
+    }
+    Console.Write(i + " ");
+
+}
+
+Console.WriteLine();
+Console.WriteLine();
+Console.WriteLine("Incrementando de 1 em 1 e finalizando no 16:");
+for (int i = x; i <= y; i++)
+{
+    if (i == 16)
+    {
+        break;
+    }
+    Console.Write(i + " ");
+
+}
+
+/*var x = 10;
+var y = 20;
+
+Console.WriteLine("Será apresentado os números pares de 10 a 20, excluindo o 16");
+Console.WriteLine();
+
+Console.WriteLine("Incrementando de 2 em 2:");
+for (int i = x; i <= y; i += 2)  // Use variável diferente
+{
+    if (i == 16)
+    {
+        continue;
+    }
+    Console.Write(i + " ");
+}
+Console.WriteLine();
+Console.WriteLine();
+
+Console.WriteLine("Incrementando de 1 em 1:");
+for (int i = x; i <= y; i++)  // Use variável diferente
+{
+    if (i == 16)
+    {
+        continue;
+    }
+    Console.Write(i + " ");
+}
+Console.WriteLine();
+Console.WriteLine();
+
+Console.WriteLine("Incrementando de 1 em 1 e finalizando no 16:");
+for (int i = x; i <= y; i++)  // Use variável diferente
+{
+    if (i == 16)
+    {
+        break;
+    }
+    Console.Write(i + " ");
+
+}*/
+
+
 
 Console.ReadLine();
