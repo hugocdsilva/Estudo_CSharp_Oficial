@@ -156,7 +156,7 @@ do {
     }
 } while (letra != "x");*/
 
-//6.
+/*6.
 
 var x = 10;
 var y = 20;
@@ -203,49 +203,64 @@ for (int i = x; i <= y; i++)
     }
     Console.Write(i + " ");
 
-}
+}*/
 
-/*var x = 10;
-var y = 20;
+/*7.
 
-Console.WriteLine("Será apresentado os números pares de 10 a 20, excluindo o 16");
+Console.Write("Informe a quantidade de linha para a árvore de *: ");
+int linhas = int.Parse(Console.ReadLine());
 Console.WriteLine();
 
-Console.WriteLine("Incrementando de 2 em 2:");
-for (int i = x; i <= y; i += 2)  // Use variável diferente
+for (int i = 1; i <= linhas; i++)
 {
-    if (i == 16)
+    for (int j = 1; j <= i; j++)
     {
-        continue;
+        Console.Write("*");
     }
-    Console.Write(i + " ");
-}
-Console.WriteLine();
-Console.WriteLine();
-
-Console.WriteLine("Incrementando de 1 em 1:");
-for (int i = x; i <= y; i++)  // Use variável diferente
-{
-    if (i == 16)
-    {
-        continue;
-    }
-    Console.Write(i + " ");
-}
-Console.WriteLine();
-Console.WriteLine();
-
-Console.WriteLine("Incrementando de 1 em 1 e finalizando no 16:");
-for (int i = x; i <= y; i++)  // Use variável diferente
-{
-    if (i == 16)
-    {
-        break;
-    }
-    Console.Write(i + " ");
-
+    Console.WriteLine();
 }*/
 
 
+/*8.
+
+Console.Write("Escolha um número para emitir o fatorial dele: ");
+int n = int.Parse(Console.ReadLine());
+Console.WriteLine();
+
+int i;
+
+Console.Write($"O fatorial de {n} é representado por {n}! = {n}");
+
+for (i = 1; i <= n; i++)
+{
+    int fatorial = n - i;
+    Console.Write($"*{fatorial}");
+    if (fatorial == 1)
+    {
+        break;
+    }
+}*/
+
+
+Console.WriteLine("Será apresentada as tabelas de multiplicação de 2 ao 6:");
+Console.WriteLine();
+
+int x = 2;
+int y = 6;
+
+do
+{
+    for (; x <= y; x++)
+    {
+        for (int i = 1; i <= 10; i++)
+        {
+            int multi = x * i;
+            Console.WriteLine($"{x} x {i} = {multi}");
+
+        }
+
+        Console.WriteLine();
+    }
+} while (x <= y);
 
 Console.ReadLine();
