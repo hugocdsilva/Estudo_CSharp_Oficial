@@ -241,7 +241,7 @@ for (i = 1; i <= n; i++)
     }
 }*/
 
-
+/*9.
 Console.WriteLine("Será apresentada as tabelas de multiplicação de 2 ao 6:");
 Console.WriteLine();
 
@@ -261,6 +261,113 @@ do
 
         Console.WriteLine();
     }
-} while (x <= y);
+} while (x <= y);*/
+
+/*10. 
+
+int nota;
+
+do
+{
+    Console.WriteLine("_________________________________________________________________________________________");
+    Console.Write("Informe a nota do aluno para apresentar a avaliação (digite 99 para parar o processo): ");
+    nota = int.Parse(Console.ReadLine());
+    Console.WriteLine();
+
+    while (nota < 0 || nota > 10 & nota != 99)
+    {
+        Console.Write("Nota inválida! Informe uma nota de 0 a 10 para apresentar a avaliação (digite 99 para parar o processo): ");
+        nota = int.Parse(Console.ReadLine());
+        if (nota >= 0 & nota <= 10 || nota == 99)
+        {
+            Console.WriteLine("");
+        }
+    }
+    switch (nota)
+    {
+        case 0:
+        case 1:
+        case 2:
+        case 3:
+        case 4:
+            Console.WriteLine($"Com base na nota \"{nota}\" a avalição ficou F.");
+            continue;
+
+        case 5:
+            Console.WriteLine($"Com base na nota \"{nota}\" a avalição ficou E.");
+            continue;
+
+        case 6:
+            Console.WriteLine($"Com base na nota \"{nota}\"a avalição ficou C.");
+            continue;
+
+        case 7:
+        case 8:
+            Console.WriteLine($"Com base na nota \"{nota}\" a avalição ficou B.");
+            continue;
+
+        case 9:
+            Console.WriteLine($"Com base na nota \"{nota}\" a avalição ficou A.");
+            continue;
+
+        case 10:
+            Console.WriteLine($"Com base na nota \"{nota}\" a avalição ficou A+.");
+            continue;
+
+        case 99:
+            Console.WriteLine("Processo encerrado!");
+            break;
+    }
+} while (nota != 99);*/
+
+//11.
+
+double soma;
+
+Console.WriteLine("Faça seu cálculo");
+Console.WriteLine();
+
+Console.Write("Informe o primeiro número: ");
+double num1 = double.Parse(Console.ReadLine());
+
+Console.Write("Informe o operando (+, -, /, *): ");
+string simb = Console.ReadLine();
+
+Console.Write("Informe o primeiro número: ");
+double num2 = double.Parse(Console.ReadLine());
+Console.WriteLine();
+
+if (simb == "/" & num2 == 0)
+{
+    Console.WriteLine("Não existe divisão por zero!!!");
+    Console.WriteLine();
+    Console.WriteLine($"{num1} / 0 = 8 (<- Símbolo de infinito)");
+
+}
+else
+{
+    switch (simb)
+    {
+        case "+":
+            soma = num1 + num2;
+            Console.WriteLine($"{num1} {simb} {num2} = {soma}");
+            break;
+
+        case "-":
+            soma = num1 - num2;
+            Console.WriteLine($"{num1} {simb} {num2} = {soma}");
+            break;
+
+        case "/":
+            soma = num1 / num2;
+            Console.WriteLine($"{num1} {simb} {num2} = {soma}");
+            break;
+
+        case "*":
+            soma = num1 * num2;
+            Console.WriteLine($"{num1} {simb} {num2} = {soma}");
+            break;
+    }
+}
 
 Console.ReadLine();
