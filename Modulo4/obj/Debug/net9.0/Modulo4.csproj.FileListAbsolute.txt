@@ -1,0 +1,15 @@
+C:\Users\hugo_\Documents\Curso DIO\GitNew\Modulo4\bin\Debug\net9.0\Modulo4.exe
+C:\Users\hugo_\Documents\Curso DIO\GitNew\Modulo4\bin\Debug\net9.0\Modulo4.deps.json
+C:\Users\hugo_\Documents\Curso DIO\GitNew\Modulo4\bin\Debug\net9.0\Modulo4.runtimeconfig.json
+C:\Users\hugo_\Documents\Curso DIO\GitNew\Modulo4\bin\Debug\net9.0\Modulo4.dll
+C:\Users\hugo_\Documents\Curso DIO\GitNew\Modulo4\bin\Debug\net9.0\Modulo4.pdb
+C:\Users\hugo_\Documents\Curso DIO\GitNew\Modulo4\obj\Debug\net9.0\Modulo4.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hugo_\Documents\Curso DIO\GitNew\Modulo4\obj\Debug\net9.0\Modulo4.AssemblyInfoInputs.cache
+C:\Users\hugo_\Documents\Curso DIO\GitNew\Modulo4\obj\Debug\net9.0\Modulo4.AssemblyInfo.cs
+C:\Users\hugo_\Documents\Curso DIO\GitNew\Modulo4\obj\Debug\net9.0\Modulo4.csproj.CoreCompileInputs.cache
+C:\Users\hugo_\Documents\Curso DIO\GitNew\Modulo4\obj\Debug\net9.0\Modulo4.sourcelink.json
+C:\Users\hugo_\Documents\Curso DIO\GitNew\Modulo4\obj\Debug\net9.0\Modulo4.dll
+C:\Users\hugo_\Documents\Curso DIO\GitNew\Modulo4\obj\Debug\net9.0\refint\Modulo4.dll
+C:\Users\hugo_\Documents\Curso DIO\GitNew\Modulo4\obj\Debug\net9.0\Modulo4.pdb
+C:\Users\hugo_\Documents\Curso DIO\GitNew\Modulo4\obj\Debug\net9.0\Modulo4.genruntimeconfig.cache
+C:\Users\hugo_\Documents\Curso DIO\GitNew\Modulo4\obj\Debug\net9.0\ref\Modulo4.dll
