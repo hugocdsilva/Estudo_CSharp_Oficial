@@ -40,9 +40,13 @@ int velocidadeInicial = 0;
 
 //Console.WriteLine(car.VelocidadeMaxima("Sedan", "Chevrolet", 10));
 //car.AumentarPotencia(10);
-Console.WriteLine($"A velocidade inicial é: {velocidadeInicial} km/h");
-car.Valorfinal(ref velocidadeInicial);
-Console.WriteLine($"Depois voltou para o velocidade inicial: {velocidadeInicial} km/h");
+//Console.WriteLine($"A velocidade inicial é: {velocidadeInicial} km/h");
+//car.Valorfinal(ref velocidadeInicial);
+//Console.WriteLine($"Depois voltou para o velocidade inicial: {velocidadeInicial} km/h");
+Console.Write("Informe a potência em km/h: ");
+int potencia = int.Parse(Console.ReadLine());
+Console.WriteLine();
+car.AumentarPotenciaVelocidade(potencia, out double novaVelocidade);
 
 Console.ReadLine();
 
@@ -51,12 +55,12 @@ class Carro
     public string Modelo;
     public string Montadora;
 
-    public double VelocidadeMaxima(string modelo, string montadora, int potencia)
-    {
-        Modelo = modelo;
-        Montadora = montadora;
-        return potencia * 1.75;
-    }
+    //public double VelocidadeMaxima(string modelo, string montadora, int potencia)
+    //{
+    //    Modelo = modelo;
+    //    Montadora = montadora;
+    //    return potencia * 1.75;
+    //}
     public int AumentarPotencia(int potencia)
     {
         potencia += 3;
@@ -69,6 +73,14 @@ class Carro
         Console.WriteLine($"Velocidade adquirida: {velocidadeAdquida} km/h");
         return velocidadeAdquida;
     }
+    public int AumentarPotenciaVelocidade(int potencia, out double novaVelocidade)
+        {
+        novaVelocidade = (potencia + 7) * 1.75;
+        //potencia += 3;
+        Console.WriteLine($"A potência inicial: {potencia} km/h");
+        Console.WriteLine($"A nova velocidade é: {novaVelocidade} km/h");
+        return potencia;
+    }   
 }
 
 
