@@ -27,9 +27,7 @@ class Carro
         Console.WriteLine($"Modelo: {Modelo}, Montadora: {Montadora}, Marca: {Marca}, Ano: {Ano}, Potência: {Potencia}cv");
         Console.WriteLine($"Acelerando o meu {Marca}");
         Console.WriteLine();
-    }
-
-    
+    } 
 }
 */
 
@@ -43,10 +41,15 @@ int velocidadeInicial = 0;
 //Console.WriteLine($"A velocidade inicial é: {velocidadeInicial} km/h");
 //car.Valorfinal(ref velocidadeInicial);
 //Console.WriteLine($"Depois voltou para o velocidade inicial: {velocidadeInicial} km/h");
-Console.Write("Informe a potência em km/h: ");
-int potencia = int.Parse(Console.ReadLine());
-Console.WriteLine();
-car.AumentarPotenciaVelocidade(potencia, out double novaVelocidade);
+//Console.Write("Informe a potência em km/h: ");
+//int potencia = int.Parse(Console.ReadLine());
+//Console.WriteLine();
+//car.AumentarPotenciaVelocidade(potencia, out double novaVelocidade);
+//car.ExibirInfo(2021 ,marca: "Chevrolet",modelo: "Onix",potencia: 110, montadora: "Casa do Tonho");
+
+Carro.ObterValorIPVA = 100.00;
+Console.WriteLine($"O valor do IPVA é: {Carro.IPVA()}");
+
 
 Console.ReadLine();
 
@@ -80,7 +83,18 @@ class Carro
         Console.WriteLine($"A potência inicial: {potencia} km/h");
         Console.WriteLine($"A nova velocidade é: {novaVelocidade} km/h");
         return potencia;
-    }   
+    }
+    public void ExibirInfo(int ano, string modelo = "Civic", string montadora = "Eurovia", string marca = "Ford", int potencia = 0)
+    {
+        Console.WriteLine($"Marca: {marca}\nModelo: {modelo}\nAno: {ano}\nMontadora: {montadora}\nPotência: {potencia}");
+    }
+    public static double ObterValorIPVA;
+
+    public static double IPVA ()
+    {
+        return ObterValorIPVA * 4;
+    }
+    
 }
 
 
