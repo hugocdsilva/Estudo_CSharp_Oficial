@@ -31,6 +31,7 @@ class Carro
 }
 */
 
+using System.ComponentModel.Design;
 using System.Security.Cryptography.X509Certificates;
 
 Carro car = new();
@@ -46,9 +47,11 @@ int velocidadeInicial = 0;
 //Console.WriteLine();
 //car.AumentarPotenciaVelocidade(potencia, out double novaVelocidade);
 //car.ExibirInfo(2021 ,marca: "Chevrolet",modelo: "Onix",potencia: 110, montadora: "Casa do Tonho");
+//Carro.ObterValorIPVA = 100.00;
+//Console.WriteLine($"O valor do IPVA é: {Carro.IPVA()}");
 
-Carro.ObterValorIPVA = 100.00;
-Console.WriteLine($"O valor do IPVA é: {Carro.IPVA()}");
+car.Ano = 2029;
+car.ExibirAno();
 
 
 Console.ReadLine();
@@ -77,7 +80,7 @@ class Carro
         return velocidadeAdquida;
     }
     public int AumentarPotenciaVelocidade(int potencia, out double novaVelocidade)
-        {
+    {
         novaVelocidade = (potencia + 7) * 1.75;
         //potencia += 3;
         Console.WriteLine($"A potência inicial: {potencia} km/h");
@@ -90,11 +93,28 @@ class Carro
     }
     public static double ObterValorIPVA;
 
-    public static double IPVA ()
+    public static double IPVA()
     {
         return ObterValorIPVA * 4;
     }
-    
+    private int ano;
+    public int Ano
+    {
+        get { return ano; }
+        set
+        {
+            if (value < 2000)
+            ano = 2000;
+            else if (value > 2022)
+            ano = 2022;
+            else
+             ano = value;
+        }
+    }
+    public void ExibirAno()
+    {
+        Console.WriteLine($"Ano do carro: {Ano}");
+    }
 }
 
 
