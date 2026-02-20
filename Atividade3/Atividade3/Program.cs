@@ -320,7 +320,7 @@ do
     }
 } while (nota != 99);*/
 
-//11.
+/*11.
 
 double soma;
 
@@ -370,4 +370,8 @@ else
     }
 }
 
-Console.ReadLine();
+Console.ReadLine();*/
+
+
+
+

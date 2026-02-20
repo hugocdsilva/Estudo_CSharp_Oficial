@@ -49,7 +49,7 @@ Array.Reverse(frutas);
 ExibirArray(frutas);
 */
 
-//2.
+/*2.
 
 int[] numeros = { 3, 6, 9 };
 const string palavra_Chave = "fim";
@@ -92,6 +92,68 @@ while (true)
 
         Console.WriteLine();
     }
+}*/
+
+
+//3.
+
+float[,] notas = new float[2, 5];
+
+Console.WriteLine("Informe as notas dos 5 alunos do grupo 1 e 2.\n");
+
+for (int grupo = 0; grupo < 2; grupo++)
+{
+    Console.WriteLine($"\n--- GRUPO {grupo + 1} ---\n");
+
+    for (int alunos = 0; alunos < 5; alunos++)
+    {
+        bool notaValida = false;
+
+
+        while (!notaValida)
+        {
+            Console.Write($"A nota do grupo {grupo + 1} aluno {alunos + 1}: ");
+
+            if (float.TryParse(Console.ReadLine(), out float nota))
+            {
+
+                if (nota >= 0 && nota <= 10)
+                {
+                    notas[grupo, alunos] = nota;
+                    notaValida = true;
+                }
+                else
+                {
+                    Console.WriteLine("Escolha um número entre 0 e 10!");
+                }
+
+            }
+            else
+            {
+                Console.WriteLine("Escolha um valor válido!");
+            }
+
+
+        }
+
+    }
+}
+
+Console.WriteLine("\n--- RESULTADO ---\n");
+
+for (int grupo = 0; grupo < 2; grupo++)
+{
+    float soma = 0;
+    for (int alunos = 0; alunos < 5; alunos++)
+    {
+        soma += notas[grupo, alunos];
+    }
+    float media = soma / 5;
+    Console.WriteLine($"A média do grupo {grupo + 1} é: {media}.");
 }
 
 Console.ReadLine();
+
+
+
+
