@@ -1,5 +1,8 @@
 ﻿//1.
+using System.Collections;
+using System.Collections.Specialized;
 using System.Runtime.Serialization;
+using System.Threading.Channels;
 
 //String[] frutas = { "Maça", "Banana", "Laranja", "Uva", "Manga", "Pêra", "Abacate", "Mamão", "Pêssego", "Amora", "Kiwi" };
 
@@ -95,7 +98,7 @@ while (true)
 }*/
 
 
-//3.
+/*3.
 
 float[,] notas = new float[2, 5];
 
@@ -151,8 +154,42 @@ for (int grupo = 0; grupo < 2; grupo++)
     float media = soma / 5;
     Console.WriteLine($"A média do grupo {grupo + 1} é: {media}.");
 }
+*/
+
+//4.
+
+
+    
+public class Pessoa
+{
+  
+ArrayList pessoas = new();
+
+void Exibir()
+{
+    foreach (var pessoa in pessoas)
+    {
+        Console.Write(pessoa);
+    }
+}
+
+for (int i = 0; i < 3; i++)
+{
+    Console.WriteLine($"Informe o nome da pessoas {i+1}.");
+    pessoas.Add(Console.ReadLine()+", ");
+    Console.WriteLine($"Informe o idade da pessoas {i+1}.");
+    pessoas.Add(int.Parse(Console.ReadLine())+"   ");
+    Console.WriteLine();
+}
+}
+
+
 
 Console.ReadLine();
+
+
+
+
 
 
 
