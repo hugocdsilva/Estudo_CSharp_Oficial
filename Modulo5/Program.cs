@@ -158,7 +158,7 @@ for (int grupo = 0; grupo < 2; grupo++)
 }
 */
 
-//4.
+/*4.
 ArrayList pessoas = new();
 
 void Divisoria()
@@ -283,8 +283,143 @@ void Escolha()
 // Inicio do programa
 IncluirPessoas();
 EncerrarLista();
+*/
 
-Console.ReadLine();
+//Exercício.
+
+class Aluno {
+
+    static void Main()
+    {
+        List<string> nome = new() { "Maria", "Manoel", "Amanda", "Carlos", "Jaime", "Debora", "Alicia", "Sandra", "Marta", "Sueli" };
+        List<double> nota = new() { 8.75, 6.95, 7.25, 6.55, 8.50, 5.95, 9.25, 5.55, 7.85, 9.15 };
+
+        void Divisoria()
+        {
+            Console.WriteLine("\n----------------------------");
+        }
+
+        void ExibirLista()
+        {
+            Console.Write("\n--------Lista Atual--------\n");
+            Console.WriteLine("Nome e a nota dos alunos\n");
+           
+            for (int i = 0; i < nome.Count; i++)
+            {
+                nome.Sort();
+                Console.WriteLine($"A pessoa {i + 1} é: {nome[i]}, {nota[i]}");
+            }
+       
+        }
+
+        void IncluirAluno()
+        {
+
+            Console.WriteLine("\nEscolha a quantidade de aluno que deseja incluir na lista: ");
+            int qtdAlunos = int.Parse(Console.ReadLine());
+
+            for (int i = 0; i < qtdAlunos; i++)
+            {
+                Console.WriteLine($"\nInforme o nome da pessoas {i + 1}:");
+                nome.Add(Console.ReadLine());
+                Console.WriteLine($"Informe o nota da pessoas {i + 1}:");
+                nota.Add(double.Parse(Console.ReadLine()));
+            }
+
+            ExibirLista();
+        }
+
+        void RemoverPessoas()
+        {
+            Console.WriteLine("\nEscolha a quantidade de pessoas que deseja remover na lista: ");
+            int qtdAlunos = int.Parse(Console.ReadLine());
+
+            for (int i = 0; i < qtdAlunos; i++)
+            {
+                Console.WriteLine($"\nInforme o nome da pessoa {i + 1} que deseja remover da lista: ");
+                string nomeRemover = Console.ReadLine();
+
+                while (!nome.Contains(nomeRemover))
+                {
+                    Console.WriteLine($"A pessoa {nomeRemover} não foi encontrada na lista.");
+                    Console.WriteLine("Digite outro nome (ou 'sair' para cancelar): ");
+                    nomeRemover = Console.ReadLine();
+
+                    if (nomeRemover.ToLower() == "sair")
+                    {
+                        Console.WriteLine("Operação cancelada.");
+                        return;
+                    }
+
+                }
+
+                for (int j = 0; j < nome.Count; j++)
+                {
+                    if (nome[j].ToString().StartsWith(nomeRemover))
+                    {
+                        nome.RemoveAt(j);
+                        nota.RemoveAt(j);
+                        Console.WriteLine($"A pessoa {nomeRemover} foi removida da lista.");
+                    }
+                }
+            }
+            ExibirLista();
+        }
+
+
+        void Escolha()
+        {
+            if (nome.Count > 0)
+            {
+                Console.WriteLine("\nDigite \"i\" para incluir, ou \"r\" para remover alguma pessoa da lista");
+                string resposta = Console.ReadLine();
+
+                while (resposta.ToLower() != "i" && resposta.ToLower() != "r")
+                {
+                    Console.WriteLine("Resposta inválida. Por favor, responda com 'i' para incluir ou 'r' para remover.");
+                    resposta = Console.ReadLine();
+                }
+
+                if (resposta.ToLower() == "r")
+                {
+                    RemoverPessoas();
+                    EncerrarLista();
+                }
+                else if (resposta.ToLower() == "i")
+                {
+                    IncluirAluno();
+                    EncerrarLista();
+
+                }
+            }
+        }
+
+        void EncerrarLista()
+        {
+            Console.WriteLine("\nDeseja encerrar a lista [s/n]?");
+            string encerrarlist = Console.ReadLine();
+
+            while (encerrarlist.ToLower() != "s" && encerrarlist.ToLower() != "n")
+            {
+                Console.WriteLine("Resposta inválida. Por favor, responda com 's' para sim ou 'n' para não.");
+                encerrarlist = Console.ReadLine();
+            }
+            if (encerrarlist.ToLower() == "s")
+            {
+                Console.WriteLine("Fim do processo...");
+            }
+            else if (encerrarlist.ToLower() == "n")
+            {
+                Divisoria();
+                Escolha();
+            }
+        }
+
+        ExibirLista();
+        Escolha();
+
+    } 
+}
 
 
 
