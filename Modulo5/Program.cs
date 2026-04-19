@@ -289,6 +289,9 @@ EncerrarLista();
 
 class Aluno {
 
+    public string Nome { get; set; }
+    public double Nota { get; set; }
+
     static void Main()
     {
         List<string> nome = new() { "Maria", "Manoel", "Amanda", "Carlos", "Jaime", "Debora", "Alicia", "Sandra", "Marta", "Sueli" };
@@ -304,12 +307,25 @@ class Aluno {
             Console.Write("\n--------Lista Atual--------\n");
             Console.WriteLine("Nome e a nota dos alunos\n");
            
+            List<Aluno> itens = new();
+
             for (int i = 0; i < nome.Count; i++)
             {
-                nome.Sort();
-                Console.WriteLine($"A pessoa {i + 1} é: {nome[i]}, {nota[i]}");
+                itens.Add(new Aluno { Nome = nome[i], Nota = nota[i] });
             }
-       
+
+
+            //ordenado por valor escolhido
+            var valorMinimo = 7;
+            var ordenadoPorValorEscolhido = itens.Where(i => i.Nota > valorMinimo).OrderBy(i => i.Nome).ToList();
+
+            foreach (var item in ordenadoPorValorEscolhido)
+                {
+                    Console.WriteLine($"Aluno: {item.Nome} - Nota: {item.Nota}");
+                }
+
+            double media = nota.Average();
+            Console.WriteLine($"\nA média da turma é: {media}");
         }
 
         void IncluirAluno()
